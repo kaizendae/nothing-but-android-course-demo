@@ -158,7 +158,8 @@ public class ChipInfo extends AppCompatActivity {
                 resultat = readFromAssets("macdb.dat", mac[0]);
                 Log.i("klm", "doInBackground: "+ mac[0]);
                if (resultat == null) {
-                    resultat = getPageGet(mac[0]);
+                   resultat = "no vendor found";
+                    //resultat = getPageGet(mac[0]);
                 }
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -205,10 +206,10 @@ public class ChipInfo extends AppCompatActivity {
     }
 
 
-    public String getPageGet(String q) {
+    /*public String getPageGet(String q) {
         StringBuffer text = new StringBuffer("");
         String ur = "http://api.macvendors.com/" + "B4EFFA";
-        /*Log.i("klm",ur);
+        *//*Log.i("klm",ur);
         String Output = "";
         try{
 
@@ -223,7 +224,7 @@ public class ChipInfo extends AppCompatActivity {
         }catch (Exception e) {
             Log.i("Exemple_Android", e.getMessage());
         }
-        return Output;*/
+        return Output;*//*
         try {
             URI url = new URI(ur);
             org.apache.http.client.HttpClient client = new DefaultHttpClient();
@@ -239,7 +240,7 @@ public class ChipInfo extends AppCompatActivity {
             Log.i("Exemple_Android", e.getMessage());
         }
         return text.toString();
-    }
+    }*/
     public String Stream2String(InputStream inputStream) {
         BufferedReader bureader =new BufferedReader( new InputStreamReader(inputStream));
         String line ;

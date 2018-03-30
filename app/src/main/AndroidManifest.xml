@@ -44,7 +44,9 @@
         <activity android:name=".SelectionWidget2" />
         <activity android:name=".JsonCountries" />
         <activity android:name=".Dialoges" />
-        <activity android:name=".ChipInfo"></activity>
+        <activity android:name=".ChipInfo" />
+        <activity android:name=".Database" />
+        <activity android:name=".Info"></activity>
     </application>
 
 </manifest>

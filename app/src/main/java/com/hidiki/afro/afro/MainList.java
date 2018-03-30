@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainList extends AppCompatActivity {
     Intent Int;
     String items[] = new String[]{"0 - Dialer Intent","1 - Google Search Intent","2 - Intent Result","3 - WebView + ImageButton","4 - SelectionWidget1","5 - SelectionWidget2",
-            "6 - Json Countries" ,"7 - Dialoges" ,"8 - menu + asynctask  " ,"7 - Dialoges" ,"7 - Dialoges" ,"7 - Dialoges" ,"7 - Dialoges"};
+            "6 - Json Countries" ,"7 - Dialoges" ,"8 - menu + asynctask  " ,"9 - Database SQLite" ,"7 - Dialoges" ,"7 - Dialoges" ,"7 - Dialoges"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +62,10 @@ public class MainList extends AppCompatActivity {
                         break;
                     case 8:
                         Int = new Intent(MainList.this ,ChipInfo.class);
+                        startActivity(Int);
+                        break;
+                    case 9:
+                        Int = new Intent(MainList.this ,Database.class);
                         startActivity(Int);
                         break;
                 }
