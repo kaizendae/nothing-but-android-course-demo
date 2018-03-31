@@ -35,7 +35,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } else {
             this.getReadableDatabase();
             try {
-
                 copyDataBase();
             } catch (Exception e) {
                 throw new Error("Error copying database");

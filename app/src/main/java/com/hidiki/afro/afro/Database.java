@@ -45,6 +45,11 @@ public class Database extends AppCompatActivity {
         mList();
     }
     private void mList(){
+        /*
+        * cette fontion fait retourner data de la base de données dans un cursor
+        * pour chaque row de cursor on ajoutant les données a la list
+        *
+        * */
         final ArrayList<String> list= new ArrayList<>();
         Cursor cu = myDbHelper.getData();
         while(cu.moveToNext()){

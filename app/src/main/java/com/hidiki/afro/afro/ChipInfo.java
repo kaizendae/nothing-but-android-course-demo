@@ -1,8 +1,10 @@
 package com.hidiki.afro.afro;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -120,6 +122,25 @@ public class ChipInfo extends AppCompatActivity {
                     );
 
                 }
+                break;
+            case R.id.action_about:
+                //View messageView = getLayoutInflater().inflate(R.layout.about, null);
+
+                // When linking text, force to always use default color. This works
+                // around a pressed color state bug.
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setIcon(R.drawable.ic_thumb_up_black_24dp);
+                builder.setTitle(R.string.app_name);
+                builder.setMessage("this applciation is a demo for the course of android course LP DIAI 2017-2018 \n\n Encadrent: A.Mazoul\n\n" +
+                        " ELASRI ABDELATI\n" +
+                        " ELKAMALI ANAS");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                AlertDialog Dialog = builder.create();
+                Dialog.show();
                 break;
         }
         return true;

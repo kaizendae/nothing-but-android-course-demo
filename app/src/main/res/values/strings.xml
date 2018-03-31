@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Demo Cours Android</string>
-
     <string-array name="couleurs">
         <item>Rouge</item>
         <item>Blue</item>
