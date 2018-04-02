@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtiso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="20dp"
+        android:text="ISO"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="235dp"
+        android:layout_height="55dp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toLeftOf="@+id/txtiso3"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/txtiso"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <TextView
+            android:id="@+id/txtcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NumCode" />
+
+        <TextView
+            android:id="@+id/txtphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Phone code" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtiso3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="20dp"
+        android:text="ISO3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

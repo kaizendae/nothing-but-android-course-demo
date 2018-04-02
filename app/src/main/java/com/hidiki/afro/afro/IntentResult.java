@@ -35,7 +35,7 @@ public class IntentResult extends AppCompatActivity {
 
     public void OnClickSum(View v){
         String n1 = num1.getText().toString();
-        String n2 = num1.getText().toString();
+        String n2 = num2.getText().toString();
 
         Intent intent = new Intent(IntentResult.this,IntentResultSecond.class);
         intent.putExtra("n1",n1);
