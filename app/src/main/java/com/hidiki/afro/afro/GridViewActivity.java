@@ -5,14 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Map;
-
-
-public class SelectionWidget1 extends AppCompatActivity {
+public class GridViewActivity extends AppCompatActivity {
 
     private TextView txt;
     String items[] = new String[]{"zero","one","two","three","four","five","six","seven","eight","nine","ten"};
@@ -20,18 +17,18 @@ public class SelectionWidget1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection_widget1);
+        setContentView(R.layout.activity_grid_view);
 
         txt = (TextView)findViewById(R.id.txt);
-        final ListView MainList = (ListView) findViewById(R.id.MainList);
+        final GridView MainGrid = (GridView) findViewById(R.id.gdv);
 
 
         //arraydapter getting the layout abd the items to show
         ArrayAdapter<String> adapterForMainList = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
-        MainList.setAdapter(adapterForMainList);
+        MainGrid.setAdapter(adapterForMainList);
 
         //onclick on an item
-        MainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        MainGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 txt.setText("Position:"+position+" element:"+items[position]);

@@ -46,7 +46,9 @@
         <activity android:name=".Dialoges" />
         <activity android:name=".ChipInfo" />
         <activity android:name=".Database" />
-        <activity android:name=".Info"></activity>
+        <activity android:name=".Info" />
+        <activity android:name=".GridViewActivity" />
+        <activity android:name=".SpinnerSelectionItems"></activity>
     </application>
 
 </manifest>

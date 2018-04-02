@@ -25,10 +25,18 @@ public class SelectionWidget2 extends AppCompatActivity {
         txt = (TextView)findViewById(R.id.txt);
         final ListView MainList = (ListView) findViewById(R.id.MainList);
 
+
+        //list contient une liste des hashmaps
         List = buildData();
-        String[] from = { "nom", "tel" };
-        int[] to = {android.R.id.text1, android.R.id.text2 };
+
+
+        String[] from = { "nom", "tel" }; //les keys de hashmap
+        int[] to = {android.R.id.text1, android.R.id.text2 }; //les element dans layouts pour chaque données
+
+
+        //arraydapter getting the layout abd the items to show
         SimpleAdapter adapter = new SimpleAdapter(this,List,android.R.layout.simple_list_item_2, from, to);
+
 
         MainList.setAdapter(adapter);
 
@@ -44,6 +52,8 @@ public class SelectionWidget2 extends AppCompatActivity {
     }
 
     private ArrayList<Map<String,String>>buildData(){
+
+        //cette fontion retourne une list des hashmaps
         ArrayList<Map<String,String>> list = new ArrayList<Map<String,String>>();
         list.add(putData("hanan", "0643543423"));
         list.add(putData("salma", "0671432345"));
@@ -60,7 +70,12 @@ public class SelectionWidget2 extends AppCompatActivity {
         return list;
     }
 
+
+
     private HashMap<String, String> putData(String name, String ntel) {
+
+        //cette fonction cree un hashMap de nom et tele
+
         HashMap<String, String> item = new HashMap<String, String>();
         item.put("nom", name);
         item.put("tel", ntel);

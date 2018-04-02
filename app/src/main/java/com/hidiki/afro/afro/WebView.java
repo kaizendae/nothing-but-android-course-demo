@@ -13,11 +13,7 @@ public class WebView extends AppCompatActivity {
 
 
     private android.webkit.WebView Browser;
-    private ImageButton BtnPrevious;
-    private ImageButton BtnNext;
-    private ImageButton BtnExit;
-    private String PreviousUrl;
-    private String NextUrl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,21 +21,19 @@ public class WebView extends AppCompatActivity {
 
 
         Browser = (android.webkit.WebView)findViewById(R.id.idBrowser);
+
+        //to enable java script
         Browser.getSettings().setJavaScriptEnabled(true);
-        BtnPrevious = (ImageButton)findViewById(R.id.BtnPrevious);
-        BtnNext = (ImageButton)findViewById(R.id.BtnNext);
-        BtnExit = (ImageButton)findViewById(R.id.BtnExit);
 
         final Activity activity = this;
 
+        //to open URL in the same webview
         Browser.setWebViewClient(new WebViewClient() {
             public void onReceivedError(android.webkit.WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
             }
         });
 
-        Browser.loadUrl("https://fstg-share.blogspot.com/");
-        PreviousUrl = Browser.getUrl();
 
     }
     public void Previous(View Target){

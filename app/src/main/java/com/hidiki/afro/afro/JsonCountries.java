@@ -18,20 +18,23 @@ import java.util.ArrayList;
 
 public class JsonCountries extends AppCompatActivity {
 
-    private ArrayList<Country> Countries=new ArrayList<Country>();
 
+    //cette arraylist vas contenir les tuples a afficher
     private ArrayList<String> items = new ArrayList<String>();
     private ListView MainList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json_countries);
 
+        //la listview qui vas afficher les pays
         MainList = (ListView) findViewById(R.id.MainList);
 
-
         try{
+            //ce tableau pour contenir les country
             ArrayList<Country> countries = getDataJson(this,R.raw.countires);
+
             for(int i=0;i<countries.size();i++){
                 Country cou = countries.get(i);
                 items.add(cou.name + "   code : " + cou.code);
@@ -72,22 +75,22 @@ public class JsonCountries extends AppCompatActivity {
         //Instancier un objet JSON
         JSONObject obj_JSON=new JSONObject(rawJson);
 
-        //Récupération d'un tableau des objets JSON contenus dans "countries«
+        //Récupération d'un tableau des objets JSON contenus dans "countries" array
         JSONArray array_JSON = obj_JSON.getJSONArray("countries");
 
         //pour chaque country
         for(int i=0;i<array_JSON.length();i++){
 
-        //Instanciation d'un objet Country
-            Country country=new Country();
+            //Instanciation d'un objet Country
+                Country country=new Country();
 
-        //Pour le ième Country
-            JSONObject ob_per= array_JSON.getJSONObject(i);
-            country.name = ob_per.getString("name");
-            country.code = ob_per.getString("code");
+            //Pour le ième Country
+                JSONObject ob_per= array_JSON.getJSONObject(i);
+                country.name = ob_per.getString("name");
+                country.code = ob_per.getString("code");
 
-        //l'ajout de Country dans la liste
-            Countries.add(country);
+            //l'ajout de Country dans la liste
+                Countries.add(country);
         }
         return Countries;
     }
