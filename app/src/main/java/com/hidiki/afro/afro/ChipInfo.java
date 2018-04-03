@@ -227,7 +227,7 @@ public class ChipInfo extends AppCompatActivity {
     }
 
 
-    /*public String getPageGet(String q) {
+    public String getPageGet(String q) {
         StringBuffer text = new StringBuffer("");
         String ur = "http://api.macvendors.com/" + "B4EFFA";
         *//*Log.i("klm",ur);
@@ -245,7 +245,9 @@ public class ChipInfo extends AppCompatActivity {
         }catch (Exception e) {
             Log.i("Exemple_Android", e.getMessage());
         }
-        return Output;*//*
+        return Output;
+
+        /*
         try {
             URI url = new URI(ur);
             org.apache.http.client.HttpClient client = new DefaultHttpClient();
@@ -261,7 +263,9 @@ public class ChipInfo extends AppCompatActivity {
             Log.i("Exemple_Android", e.getMessage());
         }
         return text.toString();
-    }*/
+
+        */
+    }
     public String Stream2String(InputStream inputStream) {
         BufferedReader bureader =new BufferedReader( new InputStreamReader(inputStream));
         String line ;
