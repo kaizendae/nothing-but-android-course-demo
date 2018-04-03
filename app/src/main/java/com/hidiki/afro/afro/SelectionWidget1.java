@@ -34,7 +34,7 @@ public class SelectionWidget1 extends AppCompatActivity {
         MainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                txt.setText("Position:"+position+" element:"+items[position]);
+                txt.setText("Position: "+position+"\nelement: "+items[position]);
             }
         });
 

@@ -29,7 +29,7 @@ public class IntentResultSecond extends AppCompatActivity {
 
             res = Integer.parseInt(n1) +  Integer.parseInt(n2);
 
-            txt.setText("val 1 :" + n1 +"\n val 2 :"+ n2 + "\n result : "+ res);
+            txt.setText("val 1 :" + n1 +"\nval 2 :"+ n2 + "\nresult : "+ res);
         }
     }
 

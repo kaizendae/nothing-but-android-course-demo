@@ -29,9 +29,7 @@ public class Dialoges extends AppCompatActivity {
 
 
     }
-    public void onClicklogin(View v){
 
-    }
     public void onClickSingleChoice(View v){
 
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -39,6 +37,26 @@ public class Dialoges extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
 
                 String[] clrs = getResources().getStringArray(R.array.couleurs);
+                switch(which){
+                    case 0 :
+                        Txt.setTextColor(getResources().getColor(R.color.red));
+                        break;
+                    case 1 :
+                        Txt.setTextColor(getResources().getColor(R.color.green));
+                        break;
+                    case 2:
+                        Txt.setTextColor(getResources().getColor(R.color.yellow));
+                        break;
+                    case 3 :
+                        Txt.setTextColor(getResources().getColor(R.color.purple));
+                        break;
+                    case 4 :
+                        Txt.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        break;
+                    case 5 :
+                        Txt.setTextColor(getResources().getColor(R.color.black));
+                        break;
+                }
                 Txt.setText("Single color : " + clrs[which]);
             }
         });
@@ -81,7 +99,9 @@ public class Dialoges extends AppCompatActivity {
     }
     public void onClickCustom(View v){
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
+
         View mView = getLayoutInflater().inflate(R.layout.fragment_dialog,null);
+
         final EditText EMail = (EditText) mView.findViewById(R.id.username);
         final EditText Epass = (EditText) mView.findViewById(R.id.password);
         Button LogBtn = (Button) mView.findViewById(R.id.BtnLogin);
@@ -99,6 +119,7 @@ public class Dialoges extends AppCompatActivity {
         });
 
         builder.setView(mView);
+
         AlertDialog dialog = builder.create();
         dialog.show();
     }
@@ -108,6 +129,26 @@ public class Dialoges extends AppCompatActivity {
 
         builder.setItems(R.array.couleurs, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
+                switch(which){
+                    case 0 :
+                        Txt.setTextColor(getResources().getColor(R.color.red));
+                        break;
+                    case 1 :
+                        Txt.setTextColor(getResources().getColor(R.color.green));
+                        break;
+                    case 2:
+                        Txt.setTextColor(getResources().getColor(R.color.yellow));
+                        break;
+                    case 3 :
+                        Txt.setTextColor(getResources().getColor(R.color.purple));
+                        break;
+                    case 4 :
+                        Txt.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        break;
+                    case 5 :
+                        Txt.setTextColor(getResources().getColor(R.color.black));
+                        break;
+                }
 
                 String[] clrs = getResources().getStringArray(R.array.couleurs);
                 Txt.setText("couleur choix : " + clrs[which]);
@@ -131,6 +172,7 @@ public class Dialoges extends AppCompatActivity {
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "NO",
                 new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int which) {
+                        Txt.setTextColor(getResources().getColor(R.color.red));
                         Txt.setText("alert dialog : No");
                         dialog.dismiss();
                     }
@@ -138,6 +180,7 @@ public class Dialoges extends AppCompatActivity {
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OUI",
                 new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int which) {
+                        Txt.setTextColor(getResources().getColor(R.color.green));
                         Txt.setText("alert dialog : OUI");
                         dialog.dismiss();
                     }

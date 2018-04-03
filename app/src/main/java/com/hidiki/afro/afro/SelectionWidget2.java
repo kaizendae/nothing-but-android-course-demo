@@ -45,7 +45,7 @@ public class SelectionWidget2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Map<String, String> pair =List.get(position);
-                txt.setText("Nom : "+ pair.get("nom")+" Tél : "+ pair.get("tel"));
+                txt.setText("Nom : "+ pair.get("nom")+"\nTél : "+ pair.get("tel"));
 
             }
         });

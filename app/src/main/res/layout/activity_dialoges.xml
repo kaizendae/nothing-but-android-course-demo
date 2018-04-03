@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.hidiki.afro.afro.Dialoges">
 
@@ -12,45 +12,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClickAlert"
-        android:text="Show AlertDialog" />
+        android:padding="10dp"
+        android:text="Show AlertDialog"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/BtnClrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClickListAlert"
-        android:text="Show Dialog list choice" />
+        android:padding="10dp"
+        android:text="Show Dialog list choice"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/Btnsngle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClickSingleChoice"
-        android:text="Show Singlechoice alert" />
+        android:padding="10dp"
+        android:text="Show Singlechoice alert"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClickMultipleChoice"
-        android:text="Show multiple choice dialog" />
+        android:padding="10dp"
+        android:text="Show multiple choice dialog"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClickCustom"
-        android:text="Show Custom  AlertDialog" />
+        android:padding="10dp"
+        android:text="Show Custom  AlertDialog"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/dialogtxt"
@@ -59,7 +79,10 @@
         android:layout_gravity="bottom|center"
         android:layout_margin="20dp"
         android:layout_weight="1"
-        android:text="TextView"
-        android:textSize="24sp" />
+        android:text="OUT PUT"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

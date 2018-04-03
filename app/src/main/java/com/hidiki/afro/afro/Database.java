@@ -21,10 +21,10 @@ import java.util.Map;
 
 public class Database extends AppCompatActivity {
 
-    Cursor c = null;
     TextView text;
     DatabaseHelper myDbHelper;
     ListView lv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +33,13 @@ public class Database extends AppCompatActivity {
         lv = (ListView)findViewById(R.id.list);
 
         myDbHelper = new DatabaseHelper(Database.this);
+
         try {
             myDbHelper.createDataBase();
         } catch (Exception ioe) {
-
             text.append("Unable to create database");
         }
+
         try {
             myDbHelper.openDataBase();
         } catch (SQLException sqle) {
@@ -50,8 +51,10 @@ public class Database extends AppCompatActivity {
 
     private HashMap<String, String> putData(String s1, String s2,String s3, String s4, String s5) {
 
-
-        //Création d'une HashMap pour les informations d’un item de notre listView
+        /*
+        *Création d'une HashMap pour les informations d’un item de notre listView
+        *
+        */
         HashMap<String, String> map = new HashMap<String, String>();
 
         map.put("iso", s1);
@@ -74,8 +77,8 @@ public class Database extends AppCompatActivity {
         *
         * */
 
-        String[] from = { "iso", "name","iso3", "numcode","numphone" }; // les keys des hashmaps
-        int[] to = { R.id.txtiso, R.id.txtname,R.id.txtiso3, R.id.txtcode,R.id.txtphone  }; //les element dans layouts pour chaque données
+        String[] from = { "iso", "name","iso3", "numcode","numphone" };      // les keys des hashmaps
+        int[] to = { R.id.txtiso, R.id.txtname,R.id.txtiso3, R.id.txtcode,R.id.txtphone  };         //les element dans layouts pour chaque données
 
 
         ArrayList<Map<String, String>> list = new ArrayList<Map<String, String>>();
@@ -83,7 +86,7 @@ public class Database extends AppCompatActivity {
         Cursor cu = myDbHelper.getData();
 
         while(cu.moveToNext()){
-            //Ajoute de chuaque row du cursor dans la list
+            //Ajoute de chaque row du cursor dans la list
             list.add(putData(cu.getString(1),cu.getString(2),cu.getString(4),cu.getString(5),cu.getString(6)));
         }
 

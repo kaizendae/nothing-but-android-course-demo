@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">Demo Cours Android</string>
     <string-array name="couleurs">
-        <item>Rouge</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
         <item>Blue</item>
-        <item>Vert</item>
+        <item>Black</item>
     </string-array>
     <string-array name="countries_array">
         <item>Afghanistan</item>

@@ -35,7 +35,7 @@ public class SpinnerSelectionItems extends AppCompatActivity {
         MainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    txt.setText("Position:"+position+" element:"+items[position]);
+                    txt.setText("Position: "+position+"\nelement:"+items[position]);
             }
 
             @Override

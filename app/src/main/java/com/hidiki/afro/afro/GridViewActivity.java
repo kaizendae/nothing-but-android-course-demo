@@ -31,7 +31,7 @@ public class GridViewActivity extends AppCompatActivity {
         MainGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                txt.setText("Position:"+position+" element:"+items[position]);
+                txt.setText("Position: "+position+"\nelement:"+items[position]);
             }
         });
 

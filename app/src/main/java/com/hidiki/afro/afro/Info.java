@@ -24,9 +24,12 @@ public class Info extends AppCompatActivity {
         }
 
         TextView text=(TextView)findViewById(R.id.text);
-        Intent intent=getIntent();
-        int index=intent.getIntExtra("id",0);
-        Cursor cu=db.select(index+1);
+        Intent intent = getIntent();
+
+        int index=intent.getIntExtra("id",0);       //requperation de l'id cliquée par l'utilisateur
+
+        Cursor cu = db.select(index+1);     //recuperation des données
+
         cu.moveToFirst();
         text.setText(
                 "ISO         \t\t\t:"+ cu.getString(1)+"\n"

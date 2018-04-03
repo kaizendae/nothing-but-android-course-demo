@@ -34,6 +34,8 @@ public class WebView extends AppCompatActivity {
             }
         });
 
+        Browser.loadUrl("https://fstg-share.blogspot.com/");
+
 
     }
     public void Previous(View Target){

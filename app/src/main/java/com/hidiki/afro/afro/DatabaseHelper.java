@@ -30,8 +30,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public void createDataBase() throws IOException {
+
+        //Lors du premier appel à la base, si celle-ci n’existe pas le système exécutera alors les scripts de création des tables
         boolean dbExist = checkDataBase();
+
         if (dbExist) {
+
         } else {
             this.getReadableDatabase();
             try {
@@ -43,6 +47,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private boolean checkDataBase() {
+        /*
+        * cette fontion retourne true si la base de données exist
+        * */
         SQLiteDatabase checkDB = null;
         try {
             String myPath = DB_PATH + DB_NAME;
@@ -56,6 +63,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void copyDataBase() throws IOException {
+        /**
+         * cette fontion copiera la base de données
+         *
+         */
         InputStream myInput = myContext.getAssets().open(DB_NAME);
         String outFileName = DB_PATH + DB_NAME;
         OutputStream myOutput = new FileOutputStream(outFileName);
@@ -71,9 +82,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void openDataBase() throws SQLException {
+        /**
+         * cette fontion retourne la base de donénes dans un objet SQLiteDatabase
+         */
         String myPath = DB_PATH + DB_NAME;
         myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
-
     }
 
     @Override
